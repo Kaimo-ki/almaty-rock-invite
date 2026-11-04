@@ -319,6 +319,7 @@ img { display: block; max-width: 100%; }
   .section-heading > div { min-width: 0; }
   .section-index { margin-top: 0; }
   .section h2 { font-size: clamp(34px, 11vw, 62px); }
+  .details-section h2 { font-size: clamp(29px, 9vw, 56px); }
   .section-intro { margin-top: 12px; font-size: 15px; line-height: 1.55; }
   .detail-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .detail-card { min-height: 146px; padding: 13px; }
