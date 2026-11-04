@@ -30,25 +30,26 @@
     whatsapp.classList.add("is-disabled");
     whatsapp.addEventListener("click", (event) => {
       event.preventDefault();
-      showToast("Добавим номер организатора перед открытием записи.");
+      showToast("Ссылка появится, когда организатор подтвердит номер WhatsApp.");
     });
   }
 
-  const map = document.querySelector("[data-map]");
-  if (map && config.twoGisUrl) {
-    map.href = config.twoGisUrl;
-    map.target = "_blank";
-    map.rel = "noopener noreferrer";
-    map.removeAttribute("aria-disabled");
-    map.classList.remove("is-disabled");
-  } else if (map) {
-    map.setAttribute("aria-disabled", "true");
-    map.classList.add("is-disabled");
-    map.addEventListener("click", (event) => {
-      event.preventDefault();
-      showToast("Добавим точку 2GIS, когда выберем площадку.");
-    });
-  }
+  document.querySelectorAll("[data-map]").forEach((map) => {
+    if (config.twoGisUrl) {
+      map.href = config.twoGisUrl;
+      map.target = "_blank";
+      map.rel = "noopener noreferrer";
+      map.removeAttribute("aria-disabled");
+      map.classList.remove("is-disabled");
+    } else {
+      map.setAttribute("aria-disabled", "true");
+      map.classList.add("is-disabled");
+      map.addEventListener("click", (event) => {
+        event.preventDefault();
+        showToast("Ссылку на карту добавим после подтверждения адреса.");
+      });
+    }
+  });
 
   const hero = document.querySelector(".hero");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -70,11 +71,11 @@
     });
   }
 
-  if (contactNote && phone && config.twoGisUrl) {
-    contactNote.textContent = "Напиши организатору, чтобы уточнить детали и договориться об оплате.";
-  } else if (contactNote && phone) {
-    contactNote.textContent = "Напиши организатору, чтобы уточнить детали и договориться об оплате. Точку 2GIS добавим после выбора места.";
+  if (contactNote && phone) {
+    contactNote.textContent = "Напиши в WhatsApp, чтобы уточнить билет и договориться об оплате.";
   } else if (contactNote && config.twoGisUrl) {
-    contactNote.textContent = "Открой точку на карте. Номер WhatsApp добавим перед открытием записи.";
+    contactNote.textContent = "Маршрут уже открыт в 2GIS. Ссылку на WhatsApp добавим после подтверждения номера организатора.";
+  } else if (contactNote) {
+    contactNote.textContent = "Ссылки на WhatsApp и карту добавим после подтверждения организатора.";
   }
 })();
