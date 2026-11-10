@@ -146,7 +146,7 @@ button:focus-visible, a:focus-visible, model-viewer:focus-visible {
   inset: 0;
   z-index: 0;
   content: "";
-  background: url("./assets/alatau-sunset-range.svg") center center / cover no-repeat;
+  background: url("./assets/alatau-sunset-range-v2.svg") center center / cover no-repeat;
   opacity: 1;
   pointer-events: none;
 }
@@ -177,7 +177,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   height: 210px;
   content: "";
   transform: translateX(-50%);
-  background: url("./assets/alatau-sunset-range.svg") center 60% / cover no-repeat;
+  background: url("./assets/alatau-sunset-range-v2.svg") center 60% / cover no-repeat;
   opacity: .17;
   pointer-events: none;
 }
@@ -255,7 +255,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   z-index: -1;
   inset: 0;
   content: "";
-  background: url("./assets/alatau-sunset-range.svg") center bottom / cover no-repeat;
+  background: url("./assets/alatau-sunset-range-v2.svg") center bottom / cover no-repeat;
   opacity: .34;
   pointer-events: none;
 }
