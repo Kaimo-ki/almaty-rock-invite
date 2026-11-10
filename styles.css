@@ -140,7 +140,16 @@ button:focus-visible, a:focus-visible, model-viewer:focus-visible {
   background: radial-gradient(ellipse at 50% 54%, #24475b, #0a1a27 72%);
   box-shadow: 0 28px 70px rgba(0, 0, 0, .25);
 }
-model-viewer { display: block; width: 100%; height: clamp(360px, 42vw, 510px); background: transparent; --poster-color: transparent; }
+.model-frame::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: "";
+  background: url("./assets/almaty-mountains.svg") center bottom / cover no-repeat;
+  opacity: .78;
+  pointer-events: none;
+}
+model-viewer { position: relative; z-index: 1; display: block; width: 100%; height: clamp(360px, 42vw, 510px); background: transparent; --poster-color: transparent; }
 .model-fallback { display: none; }
 model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
 .model-caption { position: absolute; right: 14px; bottom: 13px; z-index: 2; color: var(--gold-light); font-size: 8px; }
