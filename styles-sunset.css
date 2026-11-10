@@ -38,7 +38,7 @@ body::before {
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
 button, a { -webkit-tap-highlight-color: transparent; }
-button:focus-visible, a:focus-visible, model-viewer:focus-visible {
+button:focus-visible, a:focus-visible, .campus-3d-view:focus-visible {
   outline: 2px solid var(--gold-light);
   outline-offset: 4px;
 }
@@ -150,9 +150,7 @@ button:focus-visible, a:focus-visible, model-viewer:focus-visible {
   opacity: 1;
   pointer-events: none;
 }
-model-viewer { position: relative; z-index: 1; display: block; width: 100%; height: clamp(360px, 42vw, 510px); background: transparent; --poster-color: transparent; }
-.model-fallback { display: none; }
-model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; display: block; width: 100%; height: 100%; object-fit: contain; }
+.campus-3d-view { position: relative; z-index: 1; display: block; width: 100%; height: clamp(360px, 42vw, 510px); border: 0; background: transparent; }
 .model-caption { position: absolute; right: 14px; bottom: 13px; z-index: 2; color: var(--gold-light); font-size: 8px; }
 .hero-orbit { position: absolute; z-index: -1; border: 1px solid rgba(255, 91, 46, .13); border-radius: 50%; pointer-events: none; }
 .orbit-one { width: 380px; height: 380px; right: -100px; top: -170px; }
@@ -289,7 +287,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   .main-nav a { font-size: 8px; }
   .hero { padding: 42px; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); }
   .model-frame { min-height: 370px; }
-  model-viewer { height: 400px; }
+  .campus-3d-view { height: 400px; }
   .section { width: min(calc(100% - 52px), 1190px); }
   .merey-section { gap: 36px; }
   .artist-photo-wrap, .artist-photo-wrap img { min-height: 400px; }
@@ -309,7 +307,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   .hero-datetime { max-width: 520px; }
   .hero-visual { order: 2; }
   .model-frame { min-height: 320px; }
-  model-viewer { height: min(78vw, 390px); min-height: 320px; }
+  .campus-3d-view { height: min(78vw, 390px); min-height: 320px; }
   .section { width: calc(100% - 40px); padding: 65px 0; }
   .section-heading { grid-template-columns: 80px 1fr; gap: 18px; }
   .event-info-grid { grid-template-columns: 1fr 1fr; }
@@ -344,7 +342,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   .hero-actions { gap: 15px; }
   .button { min-height: 48px; padding-inline: 12px; font-size: 8px; }
   .model-frame { min-height: 275px; }
-  model-viewer { min-height: 275px; height: 76vw; }
+  .campus-3d-view { min-height: 275px; height: 76vw; }
   .section { width: calc(100% - 36px); padding: 56px 0; }
   .section-heading { display: block; margin-bottom: 25px; }
   .section-index { margin: 0 0 13px; }

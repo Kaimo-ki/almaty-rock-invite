@@ -24,7 +24,7 @@
       timeLabel: "БАСТАЛУЫ",
       mapShort: "КАРТАДАН КӨРУ",
       venueJump: "ӨТЕТІН ОРЫН",
-      modelAlt: "ATU университеті кампусының интерактивті 3D-моделі",
+      modelTitle: "ATU университеті кампусының интерактивті 3D-моделі",
       modelCaption: "ATU · 3D КАМПУС",
       eventIndex: "01 — КОНЦЕРТ",
       eventTitle: "КОНЦЕРТ ТУРАЛЫ",
@@ -78,7 +78,7 @@
       timeLabel: "НАЧАЛО",
       mapShort: "ОТКРЫТЬ НА КАРТЕ",
       venueJump: "МЕСТО ПРОВЕДЕНИЯ",
-      modelAlt: "Интерактивная 3D-модель кампуса ATU",
+      modelTitle: "Интерактивная 3D-модель кампуса ATU",
       modelCaption: "КАМПУС ATU · 3D",
       eventIndex: "01 — КОНЦЕРТ",
       eventTitle: "О КОНЦЕРТЕ",
@@ -139,6 +139,10 @@
     document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
       const value = strings[element.dataset.i18nAlt];
       if (value) element.setAttribute("alt", value);
+    });
+    document.querySelectorAll("[data-i18n-title]").forEach((element) => {
+      const value = strings[element.dataset.i18nTitle];
+      if (value) element.setAttribute("title", value);
     });
     document.querySelectorAll("[data-config]").forEach((element) => {
       const value = config[element.dataset.config];
@@ -206,7 +210,4 @@
     }
   });
 
-  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    document.querySelector("model-viewer")?.removeAttribute("auto-rotate");
-  }
 })();

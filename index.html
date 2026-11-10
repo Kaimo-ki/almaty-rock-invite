@@ -12,16 +12,15 @@
   <meta property="og:title" content="ATU Music Club — ТУЫС">
   <meta property="og:description" content="20.11.2026, сағат 18:00. Үлкен мәжіліс залы, Алматы. Кіру тегін.">
   <meta property="og:url" content="https://kaimo-ki.github.io/almaty-rock-invite/">
-  <meta property="og:image" content="https://kaimo-ki.github.io/almaty-rock-invite/assets/atu-two-us-merey-poster.jpeg">
+  <meta property="og:image" content="https://kaimo-ki.github.io/almaty-rock-invite/assets/tuis-event-poster-2026.png">
   <meta property="og:image:alt" content="ТУЫС концерті: ATU Music Club, TWO’US және MEREY">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles-sunset.css?v=tuis-star-alatau-20261110-7795b3f">
-  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+  <link rel="stylesheet" href="./styles-sunset.css?v=tuis-3d-embed-20261110">
   <script src="./event-config.js?v=tuis-20261110-8" defer></script>
-  <script src="./main.js?v=tuis-20261110-8" defer></script>
+  <script src="./main.js?v=tuis-3d-embed-20261110" defer></script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -64,8 +63,7 @@
       </div>
       <div class="hero-visual">
         <div class="model-frame">
-          <model-viewer src="./assets/atu-building.glb" poster="./assets/atu-building-preview.png" alt="ATU университеті кампусының интерактивті 3D-моделі" data-i18n-alt="modelAlt" camera-controls camera-orbit="35deg 65deg 145%" camera-target="auto" field-of-view="32deg" interaction-prompt="none" touch-action="pan-y" shadow-intensity="0.7" exposure="1" loading="lazy" reveal="auto"></model-viewer>
-          <img class="model-fallback" src="./assets/atu-building-preview.png" alt="ATU кампусының 3D көрінісі" data-i18n-alt="modelAlt">
+          <iframe class="campus-3d-view" src="./assets/atu-building-3d.html" title="ATU кампусының интерактивті 3D-моделі" data-i18n-title="modelTitle" loading="eager" scrolling="no" allowfullscreen></iframe>
           <span class="model-caption mono" data-i18n="modelCaption">ATU · 3D КАМПУС</span>
         </div>
       </div>
@@ -95,13 +93,13 @@
               <radialGradient id="entry-star-glow">
                 <stop stop-color="#fff9dc" stop-opacity=".96" />
                 <stop offset=".22" stop-color="#ffe9a5" stop-opacity=".88" />
-                <stop offset="1" stop-color="#ff9b4a" stop-opacity="0" />
+                <stop offset=".68" stop-color="#d99c32" stop-opacity=".58" />
+                <stop offset="1" stop-color="#b8761d" stop-opacity="0" />
               </radialGradient>
               <filter id="entry-star-blur"><feGaussianBlur stdDeviation="5" /></filter>
             </defs>
             <circle cx="60" cy="60" r="54" fill="url(#entry-star-glow)" filter="url(#entry-star-blur)" />
-            <path d="M60 5c5 34 16 50 55 55-39 5-50 16-55 55C55 76 44 65 5 60 44 55 55 39 60 5Z" fill="#fff5ce" />
-            <circle cx="60" cy="60" r="5" fill="#fff" />
+            <path d="M60 7 72.4 42.2 109 43 80 64.8 90.6 100 60 78.5 29.4 100 40 64.8 11 43 47.6 42.2Z" fill="#ffe29a" stroke="#fff6d6" stroke-width="2.5" stroke-linejoin="round" />
           </svg>
         </article>
       </div>
@@ -149,17 +147,26 @@
         <p class="section-index mono" data-i18n="posterIndex">04 — АФИША</p>
         <h2 id="poster-title" data-i18n="posterTitle">КЕШ АФИШАСЫ</h2>
         <p class="poster-intro" data-i18n="posterIntro">Күні, уақыты мен өтетін орны афишада көрсетілген.</p>
-        <a class="poster-open" href="./assets/atu-two-us-merey-poster.jpeg" target="_blank" rel="noopener noreferrer" data-i18n-aria="posterLinkAria">
+        <a class="poster-open" href="./assets/tuis-event-poster-2026.png" target="_blank" rel="noopener noreferrer" data-i18n-aria="posterLinkAria">
           <span data-i18n="posterOpen">АФИШАНЫ ТОЛЫҚ АШУ</span><span aria-hidden="true">↗</span>
         </a>
       </div>
-      <a class="event-poster-image" href="./assets/atu-two-us-merey-poster.jpeg" target="_blank" rel="noopener noreferrer" data-i18n-aria="posterLinkAria">
-        <img src="./assets/atu-two-us-merey-poster.jpeg" alt="ATU Music Club, TWO’US және MEREY қатысатын «ТУЫС» концерті афишасы" data-i18n-alt="posterAlt" loading="lazy" decoding="async">
+      <a class="event-poster-image" href="./assets/tuis-event-poster-2026.png" target="_blank" rel="noopener noreferrer" data-i18n-aria="posterLinkAria">
+        <img src="./assets/tuis-event-poster-2026.png" alt="ATU Music Club, TWO’US және MEREY қатысатын «ТУЫС» концерті афишасы" data-i18n-alt="posterAlt" loading="lazy" decoding="async">
       </a>
     </section>
 
     <section class="thanks-note" id="thanks-note" aria-live="polite">
-      <span class="thanks-star" aria-hidden="true">✳</span>
+      <svg class="thanks-star" viewBox="0 0 100 100" width="24" height="24" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="thanks-star-gold" x1="0" y1="0" x2="1" y2="1">
+            <stop stop-color="#fff4c5" />
+            <stop offset=".48" stop-color="#f5c65d" />
+            <stop offset="1" stop-color="#b8761d" />
+          </linearGradient>
+        </defs>
+        <path d="M50 5 61 37 95 37 68 57 78 91 50 71 22 91 32 57 5 37 39 37Z" fill="url(#thanks-star-gold)" stroke="#ffe8a4" stroke-width="2.5" stroke-linejoin="round" />
+      </svg>
       <p class="mono" data-i18n="thanksText">Осы кешті өткізуге мүмкіндік бергені үшін ATU-ға алғыс айтамыз.</p>
     </section>
   </main>
