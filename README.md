@@ -1,13 +1,12 @@
-# TWO’US × ATU Music Club — концерт в Алматы
+# ATU Music Club — концерт «ТУЫС» в Алматы
 
-Две версии страницы GitHub Pages:
+Страница GitHub Pages:
 
-- С благодарностью ATU: https://kaimo-ki.github.io/almaty-rock-invite/
-- Без благодарности: https://kaimo-ki.github.io/almaty-rock-invite/without-thanks.html
+- Основная версия с благодарностью ATU: https://kaimo-ki.github.io/almaty-rock-invite/
 
 ## Данные концерта
 
-- Дата: 20 ноября 2026 года
+- Дата: 20.11.2026
 - Начало: 18:00
 - Адрес: Алматы, ул. Толе би, 100
 - Площадка: Үлкен мәжіліс залы (Большой актовый зал)
@@ -15,7 +14,7 @@
 - Участники: TWO’US, ATU Music Club
 - Хедлайнер: MEREY
 
-Основной язык страницы — казахский; русский включается переключателем в шапке. На странице есть официальная эмблема ATU, логотип Music Club, фото исполнителей и интерактивная 3D-модель кампуса. TWO’US образовалась в 2023 году. Адрес и маршрут открываются в 2GIS.
+Основной язык страницы — казахский; русский включается переключателем в шапке. На странице есть официальная эмблема ATU, логотип Music Club, фото исполнителей, горный фон и интерактивная 3D-модель кампуса. TWO’US образовалась в 2023 году. Адрес и маршрут открываются в 2GIS. Старый адрес версии без благодарности перенаправляет на основную страницу.
 
 ## Как менять сведения
 
@@ -31,6 +30,7 @@
 - MEREY: https://www.instagram.com/mereythefairy/
 - MEREY — Betperde: https://www.youtube.com/watch?v=d8fRGTq0TXA
 - MEREY — Nege Bilmedim?: https://www.youtube.com/watch?v=MngMBJC4SvE
+- Bonapart & MEREY — Қозы Көрпеш - Баян Сұлу: https://www.youtube.com/watch?v=Qw_A6O9oDag
 
 ## Фотографии
 
