@@ -31,13 +31,13 @@ const canvas=document.getElementById('view');
 const gl=canvas.getContext('webgl',{antialias:true,alpha:true,premultipliedAlpha:false,depth:true,powerPreference:'high-performance'});
 if(!gl){document.getElementById('error').style.display='flex';throw Error('WebGL unsupported')}
 function shader(type,code){const s=gl.createShader(type);gl.shaderSource(s,code);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s}
-function program(v,f){const p=gl.createProgram();gl.attachShader(p,shader(gl.VERTEX_SHADER,v));gl.attachShader(p,shader(gl.FRAGMENT_SHADER,f));gl.linkProgram(p);if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(p));return p}
+function program(v,f,attributes){const p=gl.createProgram();gl.attachShader(p,shader(gl.VERTEX_SHADER,v));gl.attachShader(p,shader(gl.FRAGMENT_SHADER,f));if(attributes)for(const [name,location] of Object.entries(attributes))gl.bindAttribLocation(p,location,name);gl.linkProgram(p);if(!gl.getProgramParameter(p,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(p));return p}
 const vertexSrc=`attribute vec3 aPosition;attribute vec3 aNormal;attribute vec3 aColor;
 uniform vec3 uEye,uCenter;uniform float uRatio,uFocal;
 varying vec3 vCol;varying float vLight;varying float vDepth;
 void main(){vec3 forward=normalize(uCenter-uEye);vec3 right=normalize(cross(forward,vec3(0.,0.,1.)));vec3 up=cross(right,forward);vec3 delta=aPosition-uEye;float depth=dot(delta,forward);float px=dot(delta,right)*uFocal/uRatio;float py=dot(delta,up)*uFocal;float clipZ=((500.+0.5)/(500.-0.5))*depth-(2.*500.*0.5)/(500.-0.5);gl_Position=vec4(px,py,clipZ,depth);vec3 sun=normalize(vec3(-.3,-.8,1.6));vLight=.77+.25*max(0.,dot(normalize(aNormal),sun));vCol=aColor;vDepth=depth;}`;
 const fragSrc=`precision mediump float;varying vec3 vCol;varying float vLight;varying float vDepth;void main(){float mist=clamp((vDepth-140.)/350.,0.,.18);vec3 c=vCol*vLight;gl_FragColor=vec4(mix(c,vec3(.33,.47,.55),mist),1.);}`;
-const mainProgram=program(vertexSrc,fragSrc);
+const mainProgram=program(vertexSrc,fragSrc,{aPosition:0,aNormal:1,aColor:2});
 function bytes(b64){const str=atob(b64),out=new Uint8Array(str.length);for(let i=0;i<str.length;i++)out[i]=str.charCodeAt(i);return out}
 function bindBuf(name,arr,size,type,normalized){const loc=gl.getAttribLocation(mainProgram,name);const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,arr,gl.STATIC_DRAW);gl.enableVertexAttribArray(loc);gl.vertexAttribPointer(loc,size,type,normalized,0,0);return b}
 gl.useProgram(mainProgram);
@@ -49,7 +49,7 @@ const uEye=gl.getUniformLocation(mainProgram,'uEye'),uCenter=gl.getUniformLocati
 // The rooftop text is real text rendered on a textured quad in the exact facade plane.
 const textVertex=`attribute vec3 aPosition;attribute vec2 aUv;uniform vec3 uEye,uCenter;uniform float uRatio,uFocal;varying vec2 vUv;void main(){vec3 f=normalize(uCenter-uEye);vec3 r=normalize(cross(f,vec3(0.,0.,1.)));vec3 up=cross(r,f);vec3 d=aPosition-uEye;float depth=dot(d,f);float px=dot(d,r)*uFocal/uRatio;float py=dot(d,up)*uFocal;float cz=((500.+0.5)/(500.-0.5))*depth-(2.*500.*.5)/(500.-0.5);gl_Position=vec4(px,py,cz,depth);vUv=aUv;}`;
 const textFrag=`precision mediump float;uniform sampler2D uTexture;varying vec2 vUv;void main(){gl_FragColor=texture2D(uTexture,vUv);}`;
-const signProgram=program(textVertex,textFrag);
+const signProgram=program(textVertex,textFrag,{aPosition:3,aUv:4});
 const signCanvas=document.createElement('canvas');signCanvas.width=2048;signCanvas.height=96;
 let ctx=signCanvas.getContext('2d');ctx.fillStyle='#f1f4ee';ctx.fillRect(0,0,2048,96);ctx.font='bold 49px Arial,sans-serif';ctx.fillStyle='#154e95';ctx.textAlign='center';ctx.fillText('ATU   ALMATY TECHNOLOGIALYQ UNIVERSITETI',1024,66);
 const signTex=gl.createTexture();gl.bindTexture(gl.TEXTURE_2D,signTex);gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL,true);gl.texImage2D(gl.TEXTURE_2D,0,gl.RGBA,gl.RGBA,gl.UNSIGNED_BYTE,signCanvas);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MIN_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_MAG_FILTER,gl.LINEAR);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_S,gl.CLAMP_TO_EDGE);gl.texParameteri(gl.TEXTURE_2D,gl.TEXTURE_WRAP_T,gl.CLAMP_TO_EDGE);
