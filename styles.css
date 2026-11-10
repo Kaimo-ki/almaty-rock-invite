@@ -20,7 +20,8 @@ body {
   min-width: 320px;
   color: var(--cream);
   background:
-    radial-gradient(ellipse at 84% 12%, rgba(224, 91, 91, .18), transparent 34%),
+    radial-gradient(ellipse at 84% 12%, rgba(255, 113, 69, .2), transparent 34%),
+    radial-gradient(ellipse at 55% 94%, rgba(255, 99, 52, .14), transparent 44%),
     radial-gradient(ellipse at 12% 68%, rgba(255, 113, 69, .09), transparent 36%),
     linear-gradient(180deg, #101326 0%, #1c1a2c 48%, #101823 100%);
   font: 15px/1.6 var(--body);
@@ -101,9 +102,9 @@ button:focus-visible, a:focus-visible, model-viewer:focus-visible {
   gap: clamp(24px, 5vw, 70px);
   border: 1px solid rgba(243, 234, 220, .18);
   background:
-    radial-gradient(ellipse at 76% 80%, rgba(247, 117, 78, .27), transparent 40%),
-    radial-gradient(ellipse at 5% 100%, rgba(255, 91, 46, .16), transparent 42%),
-    linear-gradient(135deg, #172839 0%, #171a2a 56%, #3a2638 100%);
+    radial-gradient(ellipse at 74% 87%, rgba(255, 130, 70, .42), transparent 43%),
+    radial-gradient(ellipse at 4% 100%, rgba(255, 94, 47, .23), transparent 44%),
+    linear-gradient(135deg, #1b2737 0%, #211d31 53%, #563142 100%);
 }
 .hero::before {
   position: absolute;
@@ -137,7 +138,7 @@ button:focus-visible, a:focus-visible, model-viewer:focus-visible {
   overflow: hidden;
   min-height: 430px;
   border: 1px solid rgba(255, 91, 46, .35);
-  background: radial-gradient(ellipse at 50% 92%, #a65859 0%, #57394b 26%, #0e1e2c 74%);
+  background: radial-gradient(ellipse at 67% 75%, #ff9c4b 0%, #ed6544 28%, #713f57 62%, #302b43 100%);
   box-shadow: 0 28px 70px rgba(0, 0, 0, .25);
 }
 .model-frame::before {
@@ -145,8 +146,8 @@ button:focus-visible, a:focus-visible, model-viewer:focus-visible {
   inset: 0;
   z-index: 0;
   content: "";
-  background: url("./assets/almaty-mountains.svg?v=sunset-20261110") center bottom / cover no-repeat;
-  opacity: .94;
+  background: url("./assets/almaty-mountains.svg?v=orange-sunset-20261111") center center / cover no-repeat;
+  opacity: 1;
   pointer-events: none;
 }
 model-viewer { position: relative; z-index: 1; display: block; width: 100%; height: clamp(360px, 42vw, 510px); background: transparent; --poster-color: transparent; }
@@ -164,7 +165,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   z-index: -1;
   inset: 8% -8vw 4%;
   content: "";
-  background: radial-gradient(ellipse at 50% 70%, rgba(255, 113, 77, .14), transparent 58%);
+  background: radial-gradient(ellipse at 50% 70%, rgba(255, 113, 57, .24), transparent 58%);
   pointer-events: none;
 }
 .event-section::after {
@@ -176,8 +177,8 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   height: 210px;
   content: "";
   transform: translateX(-50%);
-  background: url("./assets/almaty-mountains.svg?v=sunset-20261110") center 57% / cover no-repeat;
-  opacity: .13;
+  background: url("./assets/almaty-mountains.svg?v=orange-sunset-20261111") center 60% / cover no-repeat;
+  opacity: .17;
   pointer-events: none;
 }
 .section-heading { display: grid; grid-template-columns: 125px 1fr; gap: 28px; align-items: start; margin-bottom: 34px; }
@@ -246,7 +247,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   gap: clamp(28px, 6vw, 76px);
   border: 1px solid rgba(255, 194, 140, .25);
   background:
-    radial-gradient(ellipse at 18% 100%, rgba(255, 117, 76, .34), transparent 46%),
+    radial-gradient(ellipse at 50% 100%, rgba(255, 116, 49, .72) 0%, rgba(247, 90, 64, .32) 30%, transparent 56%),
     linear-gradient(135deg, #39283d 0%, #211d31 58%, #482b3a 100%);
 }
 .event-poster-section::before {
@@ -254,8 +255,8 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   z-index: -1;
   inset: 0;
   content: "";
-  background: url("./assets/almaty-mountains.svg?v=sunset-20261110") center bottom / cover no-repeat;
-  opacity: .2;
+  background: url("./assets/almaty-mountains.svg?v=orange-sunset-20261111") center bottom / cover no-repeat;
+  opacity: .34;
   pointer-events: none;
 }
 .poster-copy { position: relative; z-index: 1; max-width: 490px; }
