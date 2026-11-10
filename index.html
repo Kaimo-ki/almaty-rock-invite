@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#07131d">
+  <meta name="theme-color" content="#19192a">
   <meta name="description" content="ATU Music Club Алматыда «ТУЫС» концертін ұсынады. TWO’US пен MEREY 20.11.2026 сағат 18:00-де өнер көрсетеді. Кіру тегін.">
   <title>ATU Music Club — ТУЫС, Алматыда</title>
   <meta property="og:type" content="website">
@@ -18,10 +18,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=tuis-20261110-6">
+  <link rel="stylesheet" href="./styles.css?v=tuis-20261110-7">
   <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
-  <script src="./event-config.js?v=tuis-20261110-6" defer></script>
-  <script src="./main.js?v=tuis-20261110-6" defer></script>
+  <script src="./event-config.js?v=tuis-20261110-7" defer></script>
+  <script src="./main.js?v=tuis-20261110-7" defer></script>
 </head>
 <body>
   <div class="grain" aria-hidden="true"></div>
@@ -40,6 +40,7 @@
       <a href="#concert" data-i18n="navConcert">КОНЦЕРТ</a>
       <a href="#merey">MEREY</a>
       <a href="#collab">MUSIC CLUB × TWO’US</a>
+      <a href="#poster" data-i18n="navPoster">АФИША</a>
     </nav>
     <div class="lang-switch" role="group" aria-label="Бет тілі" data-i18n-aria="languageAria">
       <button type="button" data-language="kk" aria-pressed="true">ҚАЗ</button>
@@ -129,6 +130,20 @@
         <figure class="band-photo band-photo-main"><img src="./assets/two-us-group.jpg" alt="TWO’US тобының мүшелері" data-i18n-alt="bandPhotoAlt" loading="lazy"><figcaption class="mono" data-i18n="bandCaptionOne">TWO’US · ЖАНДЫ ӘН</figcaption></figure>
         <figure class="band-photo band-photo-secondary"><img src="./assets/two-us-portrait.jpg" alt="TWO’US қатысушылары бірге" data-i18n-alt="bandPhotoAltTwo" loading="lazy"><figcaption class="mono" data-i18n="bandCaptionTwo">АЛМАТЫ · 2026</figcaption></figure>
       </div>
+    </section>
+
+    <section class="event-poster-section" id="poster" aria-labelledby="poster-title">
+      <div class="poster-copy">
+        <p class="section-index mono" data-i18n="posterIndex">04 — АФИША</p>
+        <h2 id="poster-title" data-i18n="posterTitle">КЕШ АФИШАСЫ</h2>
+        <p class="poster-intro" data-i18n="posterIntro">Күні, уақыты мен өтетін орны афишада көрсетілген.</p>
+        <a class="poster-open" href="./assets/atu-two-us-merey-poster.jpeg" target="_blank" rel="noopener noreferrer" data-i18n-aria="posterLinkAria">
+          <span data-i18n="posterOpen">АФИШАНЫ ТОЛЫҚ АШУ</span><span aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <a class="event-poster-image" href="./assets/atu-two-us-merey-poster.jpeg" target="_blank" rel="noopener noreferrer" data-i18n-aria="posterLinkAria">
+        <img src="./assets/atu-two-us-merey-poster.jpeg" alt="ATU Music Club, TWO’US және MEREY қатысатын «ТУЫС» концерті афишасы" data-i18n-alt="posterAlt" loading="lazy" decoding="async">
+      </a>
     </section>
 
     <section class="thanks-note" id="thanks-note" aria-live="polite">
