@@ -7,7 +7,7 @@
   const copy = {
     kk: {
       pageTitle: "ATU Music Club — ТУЫС, Алматыда",
-      metaDescription: "ATU Music Club Алматыда «ТУЫС» концертін ұсынады. TWO’US пен MEREY 20.11.2026 сағат 18:00-де өнер көрсетеді. Кіру тегін.",
+      metaDescription: "ATU Music Club Алматыда «ТУЫС» концертін ұсынады. TWO’US пен MEREY 19.11.2026 сағат 18:00-де өнер көрсетеді. Кіру тегін.",
       partnerAria: "ATU және Music Club логотиптері",
       atuLogoAlt: "Алматы технологиялық университетінің логотипі",
       clubLogoAlt: "ATU Music Club логотипі",
@@ -52,7 +52,7 @@
       posterIntro: "Күні, уақыты мен өтетін орны афишада көрсетілген.",
       posterOpen: "АФИШАНЫ ТОЛЫҚ АШУ",
       posterLinkAria: "ТУЫС концерті афишасын толық өлшемде ашу",
-      posterAlt: "ATU Music Club, TWO’US және MEREY қатысатын «ТУЫС» концерті афишасы, 20.11.2026, сағат 18:00.",
+      posterAlt: "ATU Music Club, TWO’US және MEREY қатысатын «ТУЫС» концерті афишасы, 19.11.2026, сағат 18:00.",
       thanksText: "Осы концертті өткізуге мүмкіндік бергені үшін ATU-ға алғыс айтамыз.",
       footerNote: "Сол жерде кездескенше.",
       toTop: "ЖОҒАРЫ ↑",
@@ -61,7 +61,7 @@
     },
     ru: {
       pageTitle: "ATU Music Club — концерт «ТУЫС» в Алматы",
-      metaDescription: "ATU Music Club представляет концерт «ТУЫС» в Алматы. На сцене TWO’US и MEREY, 20.11.2026 в 18:00. Вход свободный.",
+      metaDescription: "ATU Music Club представляет концерт «ТУЫС» в Алматы. На сцене TWO’US и MEREY, 19.11.2026 в 18:00. Вход свободный.",
       partnerAria: "Логотипы ATU и Music Club",
       atuLogoAlt: "Логотип Алматинского технологического университета",
       clubLogoAlt: "Логотип ATU Music Club",
@@ -106,7 +106,7 @@
       posterIntro: "Дата, время и место проведения указаны на афише.",
       posterOpen: "ОТКРЫТЬ АФИШУ ПОЛНОСТЬЮ",
       posterLinkAria: "Открыть афишу концерта ТУЫС в полном размере",
-      posterAlt: "Афиша концерта «ТУЫС» с ATU Music Club, TWO’US и MEREY, 20.11.2026 в 18:00.",
+      posterAlt: "Афиша концерта «ТУЫС» с ATU Music Club, TWO’US и MEREY, 19.11.2026 в 18:00.",
       thanksText: "Спасибо ATU за возможность провести этот концерт.",
       footerNote: "Увидимся там.",
       toTop: "НАВЕРХ ↑",

@@ -1,7 +1,7 @@
 window.CONCERT_CONFIG = {
   eventDate: {
-    kk: "20.11.2026",
-    ru: "20.11.2026"
+    kk: "19.11.2026",
+    ru: "19.11.2026"
   },
   eventTime: "18:00",
   venueName: {
