@@ -146,7 +146,7 @@ button:focus-visible, a:focus-visible, .campus-3d-view:focus-visible {
   inset: 0;
   z-index: 0;
   content: "";
-  background: url("./assets/alatau-sunset-range-v3.svg") center center / cover no-repeat;
+  background: url("./assets/alatau-sunset-range-v3.svg?v=tuis-gold-five-point-20261110") center center / cover no-repeat;
   opacity: 1;
   pointer-events: none;
 }
