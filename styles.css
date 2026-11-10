@@ -145,7 +145,7 @@ button:focus-visible, a:focus-visible, model-viewer:focus-visible {
   inset: 0;
   z-index: 0;
   content: "";
-  background: url("./assets/almaty-mountains.svg") center bottom / cover no-repeat;
+  background: url("./assets/almaty-mountains.svg?v=sunset-20261110") center bottom / cover no-repeat;
   opacity: .94;
   pointer-events: none;
 }
@@ -176,7 +176,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   height: 210px;
   content: "";
   transform: translateX(-50%);
-  background: url("./assets/almaty-mountains.svg") center 57% / cover no-repeat;
+  background: url("./assets/almaty-mountains.svg?v=sunset-20261110") center 57% / cover no-repeat;
   opacity: .13;
   pointer-events: none;
 }
@@ -254,7 +254,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   z-index: -1;
   inset: 0;
   content: "";
-  background: url("./assets/almaty-mountains.svg") center bottom / cover no-repeat;
+  background: url("./assets/almaty-mountains.svg?v=sunset-20261110") center bottom / cover no-repeat;
   opacity: .2;
   pointer-events: none;
 }
