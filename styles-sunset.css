@@ -146,7 +146,7 @@ button:focus-visible, a:focus-visible, model-viewer:focus-visible {
   inset: 0;
   z-index: 0;
   content: "";
-  background: url("./assets/almaty-sunset-mountains.svg") center center / cover no-repeat;
+  background: url("./assets/alatau-sunset-range.svg") center center / cover no-repeat;
   opacity: 1;
   pointer-events: none;
 }
@@ -177,7 +177,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   height: 210px;
   content: "";
   transform: translateX(-50%);
-  background: url("./assets/almaty-sunset-mountains.svg") center 60% / cover no-repeat;
+  background: url("./assets/alatau-sunset-range.svg") center 60% / cover no-repeat;
   opacity: .17;
   pointer-events: none;
 }
@@ -196,7 +196,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
 .entry-card { display: flex; flex-direction: column; justify-content: space-between; color: var(--ink); background: var(--gold); }
 .entry-card .card-kicker { color: rgba(7, 19, 29, .7); }
 .entry-card strong { position: relative; z-index: 1; font: clamp(36px, 5vw, 61px)/1 var(--display); letter-spacing: -.04em; }
-.entry-star { position: absolute; right: 18px; bottom: 7px; color: rgba(7, 19, 29, .24); font-size: 88px; }
+.entry-star { position: absolute; right: 3px; bottom: -18px; width: clamp(102px, 12vw, 144px); height: auto; opacity: .78; filter: drop-shadow(0 0 14px rgba(255, 235, 158, .52)); pointer-events: none; }
 
 .merey-section { display: grid; grid-template-columns: minmax(260px, .84fr) minmax(0, 1.16fr); align-items: center; gap: clamp(38px, 7vw, 90px); }
 .artist-photo-wrap { position: relative; overflow: hidden; min-height: 470px; max-height: 600px; aspect-ratio: 4 / 5; background: #161a1b; }
@@ -255,7 +255,7 @@ model-viewer:not(:defined) + .model-fallback { position: absolute; inset: 0; dis
   z-index: -1;
   inset: 0;
   content: "";
-  background: url("./assets/almaty-sunset-mountains.svg") center bottom / cover no-repeat;
+  background: url("./assets/alatau-sunset-range.svg") center bottom / cover no-repeat;
   opacity: .34;
   pointer-events: none;
 }
